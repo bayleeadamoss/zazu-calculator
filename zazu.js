@@ -24,6 +24,7 @@ module.exports = {
       {
         id: 2,
         type: 'CopyToClipboard',
+        text: '{value}',
       },
     ],
   },
