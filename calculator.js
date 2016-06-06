@@ -1,7 +1,8 @@
 const equation = process.argv.slice(-1)[0]
+const mathjs = require('mathjs')
 
 try {
-  const answer = eval(equation)
+  const answer = mathjs.eval(equation)
   console.log(JSON.stringify([
     {
       title: answer,

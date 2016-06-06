@@ -1,0 +1,22 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A calculator plugin for Zazu.",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinytacoteam/calculator.git"
+  },
+  "author": "Blaine Schmeisser",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tinytacoteam/calculator/issues"
+  },
+  "homepage": "https://github.com/tinytacoteam/calculator#readme",
+  "dependencies": {
+    "mathjs": "^3.2.1"
+  }
+}

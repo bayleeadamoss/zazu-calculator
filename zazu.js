@@ -6,6 +6,7 @@ module.exports = {
   icon: 'icon.png',
   homepage: 'https://github.com/tinytacoteam/calculator',
   git: 'git@github.com:tinytacoteam/calculator.git',
+  install: 'npm install',
   blocks: {
     input: [
       {
