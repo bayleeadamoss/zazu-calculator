@@ -9,11 +9,12 @@ try {
   let title = answer.replace(/\d+/, (v) => {
     return numeral(v).format('0,0')
   })
+  let value = answer.match(/\d+/g).join('')
   console.log(JSON.stringify([
     {
       title: title,
       subtitle: 'Select item to copy the value to the clipboard.',
-      value: answer,
+      value: value,
     },
   ]))
 } catch (e) {
