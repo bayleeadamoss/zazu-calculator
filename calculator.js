@@ -9,7 +9,7 @@ try {
   let title = answer.replace(/\d+/, (v) => {
     return numeral(v).format('0,0')
   })
-  let value = answer.match(/\d+/g).join('')
+  let value = answer.match(/[\d.]+/g).join('')
   console.log(JSON.stringify([
     {
       title: title,
