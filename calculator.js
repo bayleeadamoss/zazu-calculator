@@ -1,13 +1,20 @@
+'use strict'
+
 const equation = process.argv.slice(-1)[0]
 const mathjs = require('mathjs')
 
 try {
-  const answer = mathjs.eval(equation)
+  let answer = mathjs.eval(equation)
+  let value = answer
+  if (typeof answer === "object") {
+    value = answer.value
+    answer = answer.toString()
+  }
   console.log(JSON.stringify([
     {
       title: answer,
       subtitle: 'Select item to copy the value to the clipboard.',
-      value: answer,
+      value: value,
     },
   ]))
 } catch (e) {
