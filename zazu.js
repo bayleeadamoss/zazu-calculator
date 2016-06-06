@@ -16,7 +16,7 @@ module.exports = {
           const hasNumbers = input.match(/\d/)
           return hasNumbers
         },
-        script: 'node calculator.js {query}',
+        script: 'node calculator.js "{query}"',
         connections: [2],
       },
     ],
