@@ -13,9 +13,8 @@ module.exports = {
         id: 1,
         type: 'RootScript',
         respondsTo: (input) => {
-          const hasEquation = input.match(/^[\d\.\(\)\+\-*\/\s]+$/)
           const hasNumbers = input.match(/\d/)
-          return hasEquation && hasNumbers
+          return hasNumbers
         },
         script: 'node calculator.js {query}',
         connections: [2],
