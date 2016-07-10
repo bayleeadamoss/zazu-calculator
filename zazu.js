@@ -4,8 +4,8 @@ module.exports = {
   author: 'blainesch',
   description: 'Calculate stuff.',
   icon: 'icon.png',
-  homepage: 'https://github.com/tinytacoteam/calculator',
-  git: 'git@github.com:tinytacoteam/calculator.git',
+  homepage: 'https://github.com/tinytacoteam/zazu-calculator',
+  git: 'git@github.com:tinytacoteam/zazu-calculator.git',
   install: 'npm install',
   blocks: {
     input: [
