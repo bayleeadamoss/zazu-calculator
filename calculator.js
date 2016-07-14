@@ -12,6 +12,7 @@ try {
   let value = answer.match(/[\d.]+/g).join('')
   console.log(JSON.stringify([
     {
+      icon: 'fa-calculator',
       title: title,
       subtitle: 'Select item to copy the value to the clipboard.',
       value: value,
@@ -21,6 +22,7 @@ try {
   console.log(e)
   console.log(JSON.stringify([
     {
+      icon: 'fa-ban',
       title: '...',
       subtitle: 'Please enter a valid expression.',
       value: -1,
