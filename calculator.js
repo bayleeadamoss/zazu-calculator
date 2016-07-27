@@ -1,31 +1,27 @@
-'use strict'
-
-const equation = process.argv.slice(-1)[0]
 const mathjs = require('mathjs')
 const numeral = require('numeral')
 
-try {
-  let answer = mathjs.eval(equation).toString()
-  let title = answer.replace(/\d+/, (v) => {
-    return numeral(v).format('0,0')
-  })
-  let value = answer.match(/[\d.]+/g).join('')
-  console.log(JSON.stringify([
-    {
-      icon: 'fa-calculator',
-      title: title,
-      subtitle: 'Select item to copy the value to the clipboard.',
-      value: value,
+module.exports = (pluginContext) => {
+  return {
+    respondsTo: (query) => {
+      return query.match(/\d/)
     },
-  ]))
-} catch (e) {
-  console.log(e)
-  console.log(JSON.stringify([
-    {
-      icon: 'fa-ban',
-      title: '...',
-      subtitle: 'Please enter a valid expression.',
-      value: -1,
+    search: (query, env = {}) => {
+      return new Promise((resolve, reject) => {
+        const answer = mathjs.eval(query).toString()
+        const value = answer.match(/[\d.]+/g).join('')
+        const title = answer.replace(/\d+/, (v) => {
+          return numeral(v).format('0,0')
+        })
+        resolve([
+          {
+            icon: 'fa-calculator',
+            title: title,
+            subtitle: 'Select item to copy the value to the clipboard.',
+            value: value,
+          },
+        ])
+      })
     },
-  ]))
+  }
 }

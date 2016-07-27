@@ -6,19 +6,15 @@ module.exports = {
   blocks: {
     input: [
       {
-        id: 1,
-        type: 'RootScript',
-        respondsTo: (input) => {
-          const hasNumbers = input.match(/\d/)
-          return hasNumbers
-        },
-        script: 'node calculator.js "{query}"',
-        connections: [2],
+        id: 'Service',
+        type: 'RootNodeScript',
+        script: 'calculator.js',
+        connections: ['Copy'],
       },
     ],
     output: [
       {
-        id: 2,
+        id: 'Copy',
         type: 'CopyToClipboard',
         text: '{value}',
       },
