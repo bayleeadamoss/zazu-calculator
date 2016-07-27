@@ -7,7 +7,7 @@ module.exports = {
     input: [
       {
         id: 'Service',
-        type: 'RootNodeScript',
+        type: 'RootScript',
         script: 'calculator.js',
         connections: ['Copy'],
       },
