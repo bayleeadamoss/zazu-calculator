@@ -1,3 +1,4 @@
+// Deprecated use zazu.json instead
 module.exports = {
   name: 'Calculator',
   version: '0.0.1',
