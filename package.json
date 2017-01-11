@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/tinytacoteam/zazu-calculator#readme",
   "dependencies": {
-    "mathjs": "^3.2.1",
-    "numeral": "^1.5.3"
+    "mathjs": "^3.8.1",
+    "numeral": "^2.0.4"
   }
 }
