@@ -9,7 +9,7 @@ module.exports = (pluginContext) => {
     search: (query, env = {}) => {
       return new Promise((resolve, reject) => {
         const answer = mathjs.eval(query.replace(/\,/g,"")).toString()
-        const value = answer.match(/[\d.]+/g).join('')
+        const value = answer.match(/-?[\d.]+/g).join('')
         const title = answer.replace(/\d+/, (v) => {
           return numeral(v).format('0,0')
         })
